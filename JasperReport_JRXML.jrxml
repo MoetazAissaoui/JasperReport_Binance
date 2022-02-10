@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.9.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" whenResourceMissingType="Empty" uuid="847dc162-92e9-4f0d-801e-24d104c69f46">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="date (UTC)" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="tx hash" class="java.lang.String"/>
+	<field name="moneyIn (BTC)" class="java.lang.String"/>
+	<field name="moneyOut (BTC)" class="java.lang.String"/>
+	<field name="current balance (BTC)" class="java.lang.String"/>
+	<group name="Group1" keepTogether="true">
+		<groupExpression><![CDATA[$F{date (UTC)}]]></groupExpression>
+		<groupHeader>
+			<band height="60">
+				<textField>
+					<reportElement x="0" y="0" width="168" height="30" uuid="716ad26f-7c48-4982-af02-d90c60c5ac75"/>
+					<textElement>
+						<font fontName="Monospaced"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{date (UTC)}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="168" y="0" width="142" height="30" uuid="82269eb5-0177-4851-9c9e-d6e3a3df31b1"/>
+					<textElement>
+						<font fontName="Monospaced"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="310" y="0" width="121" height="30" uuid="5b8469b6-7093-412e-a022-5c7b5ebf61d6"/>
+					<textElement>
+						<font fontName="Monospaced"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{moneyIn (BTC)}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="431" y="5" width="119" height="30" uuid="8cb45ee7-8e9b-43d1-a89e-f3afb169dff6"/>
+					<textElement>
+						<font fontName="Monospaced"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{moneyOut (BTC)}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="550" y="5" width="90" height="30" uuid="c80ceda7-5f17-4804-97be-34f0844a336a"/>
+					<textElement>
+						<font fontName="Monospaced"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tx hash}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="672" y="5" width="119" height="30" uuid="0360912a-9d31-4d77-a9e2-bcbe2b8fdcae"/>
+					<textElement>
+						<font fontName="Monospaced"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{current balance (BTC)}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="Group2"/>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="18" width="380" height="30" uuid="7934f3cd-710c-4258-bd7e-bb7e1fd8fb27"/>
+				<textElement>
+					<font size="21" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Exchange Cold Wallet Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="660" y="18" width="150" height="30" uuid="c7250ba9-818a-4154-aa0e-7a06e76ac050"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="168" height="50" uuid="f653f20b-dfe3-405a-84d4-21d167377502"/>
+				<textElement textAlignment="Left">
+					<font fontName="Monospaced" size="16" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DATE
+----]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="30" width="142" height="50" uuid="0104f071-fd50-4929-827d-cbb6e6a0c346"/>
+				<textElement textAlignment="Left">
+					<font fontName="Monospaced" size="16" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[OPERATION
+---------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="30" width="121" height="50" uuid="bf6db886-c451-4b45-992b-2c6c1b3b5463"/>
+				<textElement textAlignment="Left">
+					<font fontName="Monospaced" size="16" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[IN
+--]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="30" width="119" height="50" uuid="0049ee53-2637-4cf4-aa2e-c8b196cec6a5"/>
+				<textElement textAlignment="Left">
+					<font fontName="Monospaced" size="16" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[OUT
+---]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="550" y="30" width="119" height="50" uuid="db2193c9-569e-4572-b70c-7a3859e6f9aa"/>
+				<textElement textAlignment="Left">
+					<font fontName="Monospaced" size="16" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[TX_HASH
+-------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="669" y="30" width="111" height="50" uuid="135fe3e8-b474-4608-ad05-97a72ec26a93"/>
+				<textElement textAlignment="Left">
+					<font fontName="Monospaced" size="16" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[BALLANCE
+--------]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement x="710" y="30" width="100" height="30" uuid="e71a42dd-84e1-4f5f-ab44-1f67604a4685"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
